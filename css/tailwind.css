@@ -1,3 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbar {
+    @apply flex-none bg-gray-800 text-white p-4 flex items-center justify-between;
+}
+
+.words-display {
+    @apply mt-24 mb-4 flex flex-1 flex-col items-center justify-center gap-2;
+}
+
+.words-display .display-row {
+  @apply flex items-center justify-center gap-2 w-full;
+}
+
+.words-display .letter-container {
+  @apply flex items-center justify-center w-12 h-12 border border-gray-300 rounded-lg;
+}
+
+.keyboard-container {
+  @apply mb-24 flex flex-none items-center justify-center w-full p-4;
+}
+
+.keyboard {
+  @apply flex flex-col items-center justify-center gap-1 md:gap-2 w-[356px] md:w-[552px];
+}
+
+.keyboard .first-row,
+.keyboard .second-row,
+.keyboard .third-row {
+  @apply flex items-center justify-center gap-1 md:gap-2 w-full;
+}
+
+.keyboard .key {
+  @apply flex items-center justify-center w-8 h-8 md:w-12 md:h-12 border border-gray-300 rounded-lg cursor-pointer transition-colors duration-200;
+}
+
+.keyboard .action-key {
+  @apply flex items-center text-xs md:text-base justify-center h-8 md:h-12 flex-1 border border-gray-300 rounded-lg cursor-pointer transition-colors duration-200;
+}
+
+.keyboard .key:hover {
+  @apply bg-gray-200;
+}
+
+.letter-container.error {
+  @apply border-red-500 bg-red-100;
+}
+
+.letter-container.correct {
+  @apply border-green-500 bg-green-100;
+}
