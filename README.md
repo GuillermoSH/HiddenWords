@@ -17,7 +17,7 @@ The goal is to guess the hidden word, with **multi-language support** and the ab
 ## 🛠️ Installation & Usage
 1. Clone the repository:
 ```
-git clone https://github.com/your-username/HiddenWords.git
+git clone https://github.com/GuillermoSH/HiddenWords.git
 cd HiddenWords
 ```
 2. Open index.html in your browser.
