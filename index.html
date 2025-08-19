@@ -9,60 +9,58 @@
     <script src="https://kit.fontawesome.com/528f34854d.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="font-poppins h-screen flex flex-col justify-between">
-    <nav class="navbar">
-        <div class="logo">HiddenWords</div>
-        <div class="action-btns">
-            <button class="help-btn text-2xl"><i class="fa-solid fa-circle-question"></i></button>
-        </div>
-    </nav>
-    <!-- Words display section -->
-    <section id="words-display" class="words-display"></section>
-
-    <!-- Keyboard section -->
-    <section id="keyboard-container" class="keyboard-container">
-        <div class="keyboard">
-            <div class="first-row gap-1">
-                <button class="key">Q</button>
-                <button class="key">W</button>
-                <button class="key">E</button>
-                <button class="key">R</button>
-                <button class="key">T</button>
-                <button class="key">Y</button>
-                <button class="key">U</button>
-                <button class="key">I</button>
-                <button class="key">O</button>
-                <button class="key">P</button>
-            </div>
-            <div class="second-row">
-                <button class="key">A</button>
-                <button class="key">S</button>
-                <button class="key">D</button>
-                <button class="key">F</button>
-                <button class="key">G</button>
-                <button class="key">H</button>
-                <button class="key">J</button>
-                <button class="key">K</button>
-                <button class="key">L</button>
-                <button class="key">Ñ</button>
-            </div>
-            <div class="third-row">
-                <button class="action-key px-2 md:px-0 hover:bg-blue-200 hover:border-blue-200"><span
-                        class="text-sm">Enter</span></i></button>
-                <button class="key">Z</button>
-                <button class="key">X</button>
-                <button class="key">C</button>
-                <button class="key">V</button>
-                <button class="key">B</button>
-                <button class="key">N</button>
-                <button class="key">M</button>
-                <button class="action-key hover:bg-red-200 hover:border-red-200"><i
-                        class="fa-solid fa-delete-left"></i></button>
-            </div>
-        </div>
-        <button id="reset-btn" class="reset-btn hidden">RESET</button>
+<body class="bg-white font-poppins h-screen flex flex-col">
+    <section id="home-title" class="home-title flex-none mt-20 mb-10">
+        <h1 class="text-6xl text-royalblue font-bold text-center mb-6">HiddenWords</h1>
+        <h3 class="text-2xl text-neutral-600 text-center font-bold">¡Descubre la palabra oculta!</h3>
     </section>
-    <script src="./js/game.js"></script>
+    <section id="home-main" class="home-main flex-1 flex items-center justify-center gap-10">
+        <a href="views/wordle-game.html"
+            class="home-link group hover:shadow-xl duration-200 h-60 w-60 border-[1px] border-white/30 rounded-lg overflow-hidden bg-white/20 backdrop-blur-sm shadow-lg flex flex-col items-center justify-center">
+            <div
+                class="flex w-full py-3 items-center justify-center bg-royalblue group-hover:bg-royalblue-700 transition-colors">
+                <h1 class="text-2xl tracking-wide font-bold text-white">Wordle</h1>
+            </div>
+            <div class="flex flex-col items-center justify-between py-3 flex-1">
+                <div class="grid grid-cols-4 gap-2 px-3 justify-center">
+                    <div class="aspect-square h-7 rounded-sm bg-neutral-200"></div>
+                    <div class="aspect-square h-7 rounded-sm bg-neutral-200"></div>
+                    <div class="aspect-square h-7 rounded-sm bg-neutral-200"></div>
+                    <div class="aspect-square h-7 rounded-sm bg-neutral-200"></div>
+                    <div class="aspect-square h-7 rounded-sm bg-neutral-200"></div>
+                    <div class="aspect-square h-7 rounded-sm bg-neutral-200"></div>
+                    <div class="aspect-square h-7 rounded-sm bg-neutral-200"></div>
+                    <div class="aspect-square h-7 rounded-sm bg-neutral-200"></div>
+                    <div class="aspect-square h-7 rounded-sm bg-neutral-200"></div>
+                    <div class="aspect-square h-7 rounded-sm bg-neutral-200"></div>
+                    <div class="aspect-square h-7 rounded-sm bg-neutral-200"></div>
+                    <div class="aspect-square h-7 rounded-sm bg-neutral-200"></div>
+                </div>
+                <span class="font-bold text-neutral-600">¡Adivina la palabra!</span>
+            </div>
+        </a>
+        <a href=""
+            class="home-link pointer-events-none h-60 w-60 border-[1px] border-white/30 rounded-lg overflow-hidden bg-white/20 backdrop-blur-sm shadow-lg flex flex-col items-center justify-center">
+            <div class="flex w-full py-3 items-center justify-center bg-neutral-300">
+                <h1 class="text-2xl tracking-wide font-bold text-neutral-600">Próximamente</h1>
+            </div>
+            <div class="flex flex-col items-center justify-between py-3 flex-1">
+                <div class="text-neutral-300 flex items-center justify-center flex-1 text-7xl">
+                    <i class="fa-solid fa-circle-notch fa-spin"></i>
+                </div>
+                <span class="font-bold text-neutral-600">¡Nuevo juego en camino!</span>
+            </div>
+        </a>
+    </section>
+    <section id="home-footer" class="home-footer h-[196px] mt-10 flex-none flex items-center justify-center gap-10 p-4 text-neutral-600">
+        <a href="" class="pointer-events-none flex items-center gap-1 font-bold">
+            <i class="fa-solid fa-gears text-xl"></i> Configuración
+        </a>
+        <a href="" class="pointer-events-none flex items-center gap-1 font-bold">
+            <i class="fa-solid fa-chart-simple text-xl"></i> Estadísticas
+        </a>
+    </section>
+    <script src="./js/wordle-game.js"></script>
 </body>
 
 </html>
