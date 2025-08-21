@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGears, faChartSimple, faCircleNotch } from "@fortawesome/free-solid-svg-icons";
-import LoginButton from '@/components/LoginButton'
 
-export default function HomePage() {
+export default async function HomePage() {
   return (
     <main className="bg-white font-poppins h-screen flex flex-col">
       {/* Título */}
@@ -17,7 +16,6 @@ export default function HomePage() {
         <h3 className="text-2xl text-neutral-600 text-center font-bold">
           ¡Descubre la palabra oculta!
         </h3>
-        <LoginButton />
       </section>
 
       {/* Main */}
