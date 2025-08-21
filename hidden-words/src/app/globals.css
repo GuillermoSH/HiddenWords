@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+@import "tailwindcss";
+
+@theme inline {
+  --font-poppins: "Poppins", sans-serif;
+
+  --color-royalblue-50:  #E6ECF4;
+  --color-royalblue-100: #CCD9EA;
+  --color-royalblue-200: #99B3D5;
+  --color-royalblue-300: #668CC0;
+  --color-royalblue-400: #3366AB;
+  --color-royalblue-500: #0A3476;
+  --color-royalblue-600: #082C63;
+  --color-royalblue-700: #062350;
+  --color-royalblue-800: #041A3D;
+  --color-royalblue-900: #02122A;
+
+  --color-goldenyellow-50:  #FFFBEB;
+  --color-goldenyellow-100: #FEF3C7;
+  --color-goldenyellow-200: #FDE68A;
+  --color-goldenyellow-300: #FCD34D;
+  --color-goldenyellow-400: #FBBF24;
+  --color-goldenyellow-500: #FACC15;
+  --color-goldenyellow-600: #EAB308;
+  --color-goldenyellow-700: #CA8A04;
+  --color-goldenyellow-800: #A16207;
+  --color-goldenyellow-900: #713F12;
+}
+
+.navbar {
+    @apply flex-none bg-royalblue-500 text-white p-4 flex items-center justify-between;
+}
+
+.words-display {
+    @apply mt-24 mb-4 flex flex-1 flex-col items-center justify-center gap-2;
+}
+
+.words-display .display-row {
+  @apply flex items-center justify-center gap-2 w-full;
+}
+
+.words-display .letter-container {
+  @apply flex items-center justify-center w-12 h-12 border border-gray-300 rounded-lg;
+}
+
+.keyboard-container {
+  @apply mb-24 flex flex-none flex-col items-center justify-center w-full p-4;
+}
+
+.keyboard {
+  @apply flex flex-col items-center justify-center gap-1 md:gap-2 w-[356px] md:w-[552px];
+}
+
+.keyboard .first-row,
+.keyboard .second-row,
+.keyboard .third-row {
+  @apply flex items-center justify-center gap-1 md:gap-2 w-full;
+}
+
+.keyboard .key {
+  @apply flex items-center justify-center w-8 h-8 md:w-12 md:h-12 border border-gray-300 rounded-lg cursor-pointer transition-colors duration-200;
+}
+
+.keyboard .action-key {
+  @apply flex items-center text-xs md:text-base justify-center h-8 md:h-12 flex-1 border border-neutral-300 rounded-lg cursor-pointer transition-colors duration-200;
+}
+
+.action-key.delete-key {
+  @apply hover:bg-red-200 hover:border-red-300;
+}
+.action-key.enter-key {
+  @apply hover:bg-royalblue-200 hover:border-royalblue-300;
+}
+
+.keyboard .key:hover {
+  @apply bg-neutral-200;
+}
+
+.keyboard .key.disabled,
+.keyboard .action-key.disabled {
+  @apply bg-neutral-300 border-neutral-300 pointer-events-none;
+}
+
+.letter-container.absent {
+  @apply border-red-400 bg-red-50;
+}
+
+.key.absent {
+  @apply border-neutral-400 bg-neutral-300;
+}
+
+.key.correct {
+  @apply border-green-400 bg-green-50 hover:bg-green-100;
+}
+.key.present {
+  @apply border-goldenyellow-400 bg-goldenyellow-50 hover:bg-goldenyellow-100;
+}
+
+.letter-container.correct {
+  @apply border-green-400 bg-green-50;
+}
+
+.letter-container.present {
+  @apply border-goldenyellow-400 bg-goldenyellow-50;
+}
+
+.reset-btn {
+    @apply mt-4 px-4 py-2 bg-royalblue-500 text-white rounded-lg hover:bg-royalblue-600 transition-colors duration-200;
+}
+
