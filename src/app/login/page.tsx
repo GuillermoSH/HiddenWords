@@ -35,7 +35,7 @@ export default function LoginPage() {
       <div className="w-full max-w-[400px] py-8 px-10 space-y-6 hover:shadow-xl duration-200 border border-white/30 rounded-lg overflow-hidden bg-white/20 backdrop-blur-sm shadow-lg">
         <div className="relative h-32">
           <Image
-            src="/assets/imgs/hiddenwords_logo.webp"
+            src="/assets/imgs/blue_logo_rectangle_1024x576.webp"
             alt="HiddenWords Logo"
             fill
             className="object-cover object-center"
